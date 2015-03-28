@@ -62,7 +62,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',
         'NAME': 'parasite',
-        'USER': 'root',
+        'USER': 'hashimoto',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '',
