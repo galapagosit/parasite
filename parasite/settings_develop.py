@@ -1,6 +1,9 @@
 
 from settings import *
 
+DEBUG = True
+TEMPLATE_DEBUG = True
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.mysql',

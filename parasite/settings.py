@@ -20,12 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '-eb+)p^w9ro7s&_c@==k7fsecurrgkk1q#jspn9m2h688ql+1t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['parasite.galapagosit.com']
 
+ADMINS = (('daisuke', 'galapagosit@gmail.com'),)
 
 # Application definition
 
