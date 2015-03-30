@@ -19,7 +19,7 @@ class GeoDataApi(object):
         GeoDataLog.objects.create(latlng=point)
 
     @classmethod
-    def get_nearset_logs(cls, lat, lng, latlng_range=0.2, length_limit_km=1):
+    def get_nearset_logs(cls, lat, lng, latlng_range=0.2, length_limit_km=1, limit=20):
         lat = float(lat)
         lng = float(lng)
 
@@ -60,11 +60,13 @@ WHERE
 HAVING
     length_km < {length_limit_km}
 ORDER BY length_km
+LIMIT {limit}
 """.format(
             lat=lat,
             lng=lng,
             latlng_range=latlng_range,
-            length_limit_km=length_limit_km
+            length_limit_km=length_limit_km,
+            limit=limit
         )
 
         cursor = connection.cursor()
